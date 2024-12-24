@@ -1,0 +1,75 @@
+1)Components :-
+==>Component are JS function that returns rendered value(HTML)
+==>Any Website can be break down in small block this small blocks are called Components.React is ther combination of this Component
+==>Component Name must start with uppercase character if multi words then in pascalcase i.e MyHeader
+==>Component function must return rendered value
+==>Built in Component :- started with lower case character rendered as dom node
+==>Custom Component :- started with uppercase character 
+2)JSX =javascript syntax extension:-
+==>It must be return rendered content
+==>function with uppercase charcater and return rendered content
+
+3)Props :-
+Props passed data from one Component to another Component
+   <TabButton>Component</TabButton> this Component will pass as children in props this is bydefault pass by React
+
+
+
+BY default React Component  execute only once 
+for tell  react  Component to re render
+
+use Hooks only in function Component only in top level function Component
+
+Forworded props
+Multiple Component Slots
+Element Identifiers as Props
+Default props Values
+
+
+
+
+<=================Tic Tac Toe ==================================================>
+Image Store in public folder vs Src/any folder
+Image store in public folder is publicaly available for all user it can be directly acceessible localhost:5173/some-image.jpg by using URL
+if is directly use in index.html then it is stored in image
+Image store in src folder is NOT publically available for all user if it try to load by above URL  it will get error
+
+
+Lec 76 :-
+   Component Isolation
+   when one Component is used multiple time this multiple Components are isolated from each other   means when something is changed then it is not effect other component
+
+
+Lec  78 :-
+   best  way to update state based on old state is pass it as like function for example 
+   setIsEditing (!isEditing) this is not good practice instead of this use it as like setIsEditing(wasEditing =>{!wasEditing})
+   why not setIsEditing (!isEditing) 
+      because behind the scene react is scheduling this means this is not instantly update but it will take some time (here it is very minor means in milisecond for in micro second) to perform operation
+      default isEditing ==false
+      for better remember function handleEdit (){
+         setIsEditing(!isEditing)  ==> will changed to true 
+         setIsEditing(!isEditing) ==> will changed to true
+      }
+      above bothe will give same output
+
+
+
+// Javascript
+Javascript does not have strong type means does not  require veriable type at the time of variable declaration
+
+primitive types ==>
+   String ,Number,Boolean, Undefined , Null, Symbol
+   It is stored in stack (limited memory)
+
+Reference type ==>
+   Array,Object, 
+   It is stored in heap (much memory)
+   for object create new memory location :- let secondPerson=Object.assign({},person)
+   as for Array wil array =array.slice()  zero argument
+
+primitive vs Reference
+link ==>https://youtu.be/9ooYYRLdg_g?si=YTO-hDk_3iJRvYnR
+
+
+
+Why directly not update object or Array because it is Reference type and will update memory location directly before it execute so first create copy of that and update that copy
